@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(25, 3, 31);
+}
+#navbar {
+  background-color: rgb(25, 3, 31);
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 90px;
+}
+.logo img {
+  width: 120px;
+  border-radius: 7px;
+ 
+}
+
+.navbar {
+   margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar ul {
+  width: 100%;
+  display: flex;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 15px;
+  width: 100%;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+#search {
+  width: 330px;
+  height: 30px;
+  background-color: rgba(255, 0, 0, 0);
+  border: 1px solid white;
+  text-align: center;
+  color: white;
+}
+
+ 
+/* button{
+    background-color: rgb(11, 11, 11);
+    color: rgb(255, 252, 252);
+    font-size: 16px;
+    border-radius: 9px;
+    padding: 6px 34px;
+    cursor: pointer;
+    border: 1px solid white;
+    
+  } */
+.loginbtn {
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 7px;
+  background-color: rgba(47, 1, 1, 0);
+  color: white;
+  padding: 6px 15px;
+}
+.loginbtn:hover{
+  background-color: rgb(141, 104, 104);
+}
+
+.plan {
+  height: 40px;
+  border: 1px solid white;
+  background-color: rgb(149, 93, 206);
+  color: rgb(16, 15, 15);
+  /* font-size: 16px; */
+  border-radius: 9px;
+  padding: 6px 15px; 
+  width: 25%;
+}
+.plan:hover{
+  background-color: rgb(175, 163, 163);
+}
+.parent {
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 15px;
+  margin-left: 100px;
+}
+
+a:hover {
+  box-shadow: 1px 1px 10px rgb(149, 79, 169);
+  border-bottom: 2px solid white;
+  width: 100%;
+}
+
+.slide {
+  position: relative;
+  top: 100px;
+  margin-left: 125px;
+  /* border: 2px solid white; */
+  height: 500px;
+
+
+
+}
+
+#previous{
+  color: white;
+  font-size:xx-large;
+}
+#previous:hover{
+  box-shadow: 1px 1px 10px rgb(238, 234, 239);
+}
+#next{
+  color: white;
+  font-size:xx-large;
+}
+#next:hover{
+  box-shadow: 1px 1px 10px rgb(238, 234, 239);
+}
+
+
+
+
+
+#trending{
+  border: 1px solid white;
+  z-index: 1200;
+  /* position: fixed; */
+  position: relative;
+  margin: 100px;
+}
+#trending h3{
+  color: antiquewhite;
+}
