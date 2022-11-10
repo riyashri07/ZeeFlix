@@ -5,7 +5,6 @@ let arr = ["images/img1.jpg", "images/img2.jpg", "images/img3.jpg","images/img4.
 
 let i = 0;
 
-
 next.addEventListener('click', function () {
     i++;
     if (i > arr.length - 1) {
