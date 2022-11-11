@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         body {
+        background-color: rgb(19, 2, 23);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      #main {
+        /* border: 1px solid white; */
+        height: 600px;
+        width: 30%;
+        margin: auto;
+        text-align: center;
+        margin-top: 20px;
+      }
+      #main >h3{
+      color: aliceblue;
+      }
+      #main > p{
+        color: aliceblue;
+    }
+
+      #main>input{
+        width: 70%;
+    padding: 13px;
+    border: none;
+    border: 1px solid rgb(183, 195, 183);
+    border-radius: 5px;
+    outline: none;
+    background:transparent;
+    margin-top: 25px;
+      }
+
+      .check{
+        /* display: flex; */
+        margin-top: 20px;
+        
+      }
+      .check >span{
+        color: aliceblue;
+      }
+ .create{
+    width: 70%;
+        padding: 10px;
+        border-radius: 5px;
+        background-color:blueviolet;
+        font-size: 16px;
+        border: 2px solid rgb(89, 14, 102);
+        margin-top: 20px;
+        cursor: pointer;
+ }
+
+ .register{
+      margin-top: 30px;
+      color: aliceblue;
+
+          }
+          .register > span > a{
+           color: blueviolet;
+            text-decoration:none;
+          }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h3>Create a new account</h3>
+      <p>Create an account to continue enjoying <br> uninterrupted video and personalised <br> experience</p>
+
+      <input type="text" placeholder="Your Name" id="name1">
+
+      <input type="number" placeholder="Your Mobile No." id="mobile">
+
+      <input type="text" placeholder="Enter your email" id="email">
+          
+      <input type="text" class="second" placeholder="Enter your password" id="password">
+      
+
+    <div class="check">
+        <input type="checkbox" >
+        <span>By proceeding you are agree to our <a href="">Terms of Services</a>  & <a href="">Privacy Policy</a> </span>
+    </div>
+  <button class="create" >Create Account</button>
+
+  <div class="register">
+    <span>Aready Register <a href="signin.html">Login</a> </span>
+ </div>
+
+    </div>
+</body>
+</html>
+<script src="signup.js"></script>

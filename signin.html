@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(19, 2, 23);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      #container {
+        /* border: 1px solid white; */
+        height: 550px;
+        width: 30%;
+        margin: auto;
+        text-align: center;
+        margin-top: 60px;
+      }
+      #container >h3{
+        color: aliceblue;
+      }
+
+      #container >p{
+        color: aliceblue;
+      }
+
+      .images {
+        display: flex;
+       justify-content: space-around;
+cursor: pointer;
+        width: 55%;
+        margin: auto;
+        padding-top: 20px;
+      }
+
+      .images > img {
+        height: 40px;
+      }
+
+      #container>input{
+        width: 70%;
+    padding: 13px;
+    border: none;
+    border: 2px solid rgb(183, 195, 183);
+    border-radius: 5px;
+    outline: none;
+    background:transparent;
+    margin-top: 40px;
+   
+
+      }
+
+      .second{
+        margin-top:  20px;
+      }
+
+      .anchor{
+        margin-top: 30px;
+      }
+      .anchor>a{
+        color:blueviolet;
+      }
+      .login{
+        width: 70%;
+        padding: 10px;
+        border-radius: 5px;
+        background-color:blueviolet;
+        font-size: 16px;
+        border: 2px solid rgb(89, 14, 102);
+        margin-top: 30px;
+      }
+
+    .register{
+      margin-top: 30px;
+      color: aliceblue;
+
+          }
+          .register > span > a{
+           color: blueviolet;
+            text-decoration: none;
+          }
+      
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h3>Login to ZEE5</h3>
+      <p>
+        Login to continue enjoying uninterrupted video and personalised
+        experience.
+      </p>
+
+      <div class="images">
+        <img src="/images/facebook.png" alt="" />
+        <img src="/images/apple.jpg" alt="" />
+        <img src="/images/twitter.png" alt="" />
+        <img src="/images/google.jpg" alt="" />
+      </div>
+
+     
+      <input type="text" placeholder="Enter your email" id="email">
+          
+      <input type="text" class="second" placeholder="Enter your password" id="password">
+
+      <div class="anchor" ><a href="">Forgot Password?</a></div>
+
+      <button class="login" >Login</button>
+
+     <div class="register">
+        <span>New to ZEE5? <a href="signup.html">Register</a> </span>
+     </div>
+
+
+
+    </div>
+
+   
+  </body>
+</html>
+
+<script src="signin.js"></script>
