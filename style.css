@@ -3,9 +3,30 @@
   padding: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  
 }
 body {
   background-color: rgb(19, 2, 23);
+}
+.navbar ul li ul {
+  transition: all .2s;
+  display: none;
+}
+.navbar ul li:hover>ul{
+  position: absolute;
+  top: 50px;
+  background-color: rgba(8, 8, 8, 0.653);
+  width: 15%;
+  display: block;
+  text-align: left;
+  padding: 30px 20px;
+  color: white;
+border-radius: 5px;  
+}
+.navbar ul li:hover>ul li:hover{
+  padding: 5px;
+  box-shadow: 2px 2px 8px rgba(52, 4, 52, 0.421);
+  background-color: rgba(48, 13, 48, 0.915);
 }
 #navbar {
   background-color: rgb(19, 2, 23);
@@ -16,6 +37,7 @@ body {
   justify-content: center;
   margin: 0 auto;
   height: 90px;
+  
 }
 .logo img {
   width: 120px;
@@ -72,8 +94,15 @@ body {
   padding: 6px 15px;
 }
 .loginbtn:hover {
-  background-color: rgb(141, 104, 104);
+  background-color: rgb(149, 93, 206);
 }
+
+.loginbtn>a{
+  color: aliceblue;
+    text-decoration: none;
+  
+}
+
 
 .plan {
   height: 40px;
@@ -111,10 +140,10 @@ li>a:hover {
 .slide > img {
   z-index: -1;
 }
-#watch {
+/* #watch {
   z-index: 1;
   margin-top: -900px;
-}
+} */
 
 #previous {
   color: white;
