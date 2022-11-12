@@ -1,280 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="Movies.css" />
-    <script
-      src="https://kit.fontawesome.com/b06a377e67.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div id="navbar">
-      <div class="logo">
-        <img src="images/logo2.img.png" alt="" />
-      </div>
-      <div class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">TVShows</a></li>
-          <li><a href="Movies.html">Movies</a></li>
-          <li><a href="#">Webseries</a></li>
-          <li><a href="#">News</a></li>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="Movies.css" />
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <title>Document</title>
+
+  <script src="https://kit.fontawesome.com/b06a377e67.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="navbar">
+    <div class="logo">
+      <img src="images/logo2.img.png" alt="" />
+    </div>
+    <div class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">TVShows</a></li>
+        <li><a href="Movies.html">Movies</a></li>
+        <li><a href="#">Webseries</a></li>
+        <li><a href="#">News</a></li>
+        <li>
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-grid-3x3-gap-fill" viewBox="0 0 16 16">
+              <path
+                d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z" />
+            </svg></a>
+        </li>
+
+        <div class="parent">
+          <input type="search" id="search" placeholder="Search for Movies,Shows,Channels etc." />
+
           <li>
-            <a href="#"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-grid-3x3-gap-fill"
-                viewBox="0 0 16 16"
-              >
+            <a href="#language"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-translate" viewBox="0 0 16 16">
                 <path
-                  d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z"
-                /></svg
-            ></a>
+                  d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z" />
+                <path
+                  d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z" />
+              </svg></a>
           </li>
 
-          <div class="parent">
-            <input
-              type="search"
-              id="search"
-              placeholder="Search for Movies,Shows,Channels etc."
-            />
+          <button class="loginbtn"><a href="signin.html">LOGIN</a></button>
 
-            <li>
-              <a href="#language"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-translate"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z"
-                  />
-                  <path
-                    d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z"
-                  /></svg
-              ></a>
-            </li>
+          <button class="plan">BUY PLAN</button>
 
-            <button class="loginbtn"><a href="signin.html">LOGIN</a></button>
-
-            <button class="plan">BUY PLAN</button>
-
-            <li>
-              <a href="#hamburger"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-list"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-                  /></svg
-              ></a>
-            </li>
-          </div>
-        </ul>
-      </div>
+          <li>
+            <a href="#hamburger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+              </svg></a>
+          </li>
+        </div>
+      </ul>
     </div>
+  </div>
 
-    <div id="first">
+  <div id="first">
+    <img src="https://tpc.googlesyndication.com/simgad/1443146685098469021?" alt="" />
+  </div>
+
+  <!------------------------------------ silde show ----------------------------------------------------->
+
+  <div class="slide">
+    <div id="container">
+      <button id="previous" class="btn">
+        <i class="fa-sharp fa-solid fa-arrow-left"></i>
+      </button>
+      <img id="image2" src="images/img1.jpg" />
+
+      <button id="next" class="btn">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!----------------------------------- only -------------------------------------------------------->
+
+  <div id="only">
+    <h2>Only on ZEE5</h2>
+  </div>
+
+  <div class="only">
+    <div>
       <img
-        src="https://tpc.googlesyndication.com/simgad/1443146685098469021?"
-        alt=""
-      />
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5168144/portrait/1920x770231e4cce81b8432db798e3051c668bf6c247548b7a24419c9605c50abb4c536b.jpg"
+        alt="" />
     </div>
 
-    <!------------------------------------ silde show ----------------------------------------------------->
-
-    <div class="slide">
-      <div id="container">
-        <button id="previous" class="btn">
-          <i class="fa-sharp fa-solid fa-arrow-left"></i>
-        </button>
-        <img id="image2" src="images/img1.jpg" />
-
-        <button id="next" class="btn">
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
-      </div>
-    </div>
-
-    <!----------------------------------- only -------------------------------------------------------->
-
-    <div id="only">
-      <h2>Only on ZEE5</h2>
-    </div>
-
-    <div class="only">
-      <div>
-        <img
-          src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5168144/portrait/1920x770231e4cce81b8432db798e3051c668bf6c247548b7a24419c9605c50abb4c536b.jpg"
-          alt=""
-        />
-      </div>
-
-      <div>
-        <img
-          src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5146416/portrait/1920x7708dc79580826949a992f2b011b0e50f28.jpg"
-          alt=""
-        />
-      </div>
-
-      <div>
-        <img
-          src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5246204/portrait/1920x770bb38e28e99124e90bd40b3cebb8a8321.jpg"
-          alt=""
-        />
-      </div>
-
-      <div>
-        <img
-          src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5133458/portrait/1920x7700b75e1f80c204a0b82dfad6f59fd7f8ce7171601b0534b17aa8968531f3bc8f1.jpg"
-          alt=""
-        />
-      </div>
-
-      <div>
-        <img
-          src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5246147/portrait/1920x7703c6105c0047c4e98848e930ff18b4e38.jpg"
-          alt=""
-        />
-      </div>
-
-      <div>
-        <img
-          src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5233808/portrait/1920x770e1e200eb2ab84c2bb678ee60e3dcf06b243111bceaad490a94d223a2872f5a7a.jpg"
-          alt=""
-        />
-      </div>
-    </div>
-
-    <!------------------------------------------ fdfyf ------------------------------------------------->
-    <div id="second">
+    <div>
       <img
-        src="https://tpc.googlesyndication.com/simgad/12632166758537980946"
-        alt=""
-      />
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5146416/portrait/1920x7708dc79580826949a992f2b011b0e50f28.jpg"
+        alt="" />
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5246204/portrait/1920x770bb38e28e99124e90bd40b3cebb8a8321.jpg"
+        alt="" />
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5133458/portrait/1920x7700b75e1f80c204a0b82dfad6f59fd7f8ce7171601b0534b17aa8968531f3bc8f1.jpg"
+        alt="" />
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5246147/portrait/1920x7703c6105c0047c4e98848e930ff18b4e38.jpg"
+        alt="" />
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5233808/portrait/1920x770e1e200eb2ab84c2bb678ee60e3dcf06b243111bceaad490a94d223a2872f5a7a.jpg"
+        alt="" />
+    </div>
+  </div>
+
+  <!------------------------------------------ fdfyf ------------------------------------------------->
+  <div id="second">
+    <img src="https://tpc.googlesyndication.com/simgad/12632166758537980946" alt="" />
+  </div>
+
+
+
+
+
+  <!------------------------------------- fyfyufyf ------------------------------------------------->
+
+
+  <div id="latest">
+    <h2>Latest and Upcoming</h2>
+  </div>
+
+  <div class="latest">
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5199975/portrait/1920x770146d749f8ff14971b38653f6029302ad.jpg"
+        alt="">
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5250012/portrait/1920x770f1078dc83dab4f81b89f58a1a3690157.jpg"
+        alt="">
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5250010/portrait/1920x770df3c97fa714d4e569a2a8b06169eb715.jpg"
+        alt="">
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5245891/portrait/1920x7704b56222a936c44f7b30712b3b0b52c9d.jpg"
+        alt="">
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5246218/portrait/1920x7704cedc8256d384df89a14578e1eb8c982.jpg"
+        alt="">
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5230436/portrait/1920x77080a9ccaeef524481ad49d14208180c8a.jpg"
+        alt="">
+    </div>
+  </div>
+
+
+
+  <!-------------------------------------------- uygyugug -------------------------------------------->
+
+
+
+  <div id="hindi">
+    <h2>Hindi Dubbed Movies</h2>
+  </div>
+
+  <div class="hindi">
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5250530/portrait/1920x770129e19e854434fa98ff8734cfc2d6d32e0963a08143b47459c03e15212307595.jpg"
+        alt="">
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-348372/portrait/1920x7708b719aadb538429abc4dde7dea45032d.jpg"
+        alt="">
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-105149/portrait/00105149incove322862859.jpg"
+        alt="">
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5227565/portrait/1920x7704ce388d5a6e74dac8ad9255657da588f.jpg"
+        alt="">
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5168593/portrait/1920x770d32fb5a532b54f718e18d08ae5bfe599.jpg"
+        alt="">
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-8142/portrait/008142cover587945931.jpg"
+        alt="">
+    </div>
+  </div>
+
+
+
+  <!---------------------------------- yugtuygjh ------------------------------------------------>
+
+  <div id="browse">
+    <h2>Browse by Language</h2>
+  </div>
+  <div class="browse">
+    <div>
+      <img src="https://akamaividz2.zee5.com/image/upload/platform/lang/english.jpg" alt="">
+      <h3>English</h3>
+    </div>
+
+    <div>
+      <img src="https://akamaividz2.zee5.com/image/upload/platform/lang/hindi.jpg" alt="">
+      <h3>Hindi</h3>
+    </div>
+
+    <div>
+      <img src="https://akamaividz2.zee5.com/image/upload/platform/lang/bengali.jpg" alt="">
+      <h3>Bengali</h3>
+    </div>
+
+    <div>
+      <img src="https://akamaividz2.zee5.com/image/upload/platform/lang/bhojpuri.jpg" alt="">
+      <h3>Bhojhpuri</h3>
+    </div>
+
+    <div>
+      <img src="https://akamaividz2.zee5.com/image/upload/platform/lang/gujrati.jpg" alt="">
+      <h3>Gujrati</h3>
     </div>
 
 
-
-
-
-<!------------------------------------- fyfyufyf ------------------------------------------------->
-
-
-<div id="latest">
-  <h2>Latest and Upcoming</h2>
-</div>
-
-<div class="latest">
-  <div>
-    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5199975/portrait/1920x770146d749f8ff14971b38653f6029302ad.jpg" alt="">
   </div>
 
-  <div>
-    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5250012/portrait/1920x770f1078dc83dab4f81b89f58a1a3690157.jpg" alt="">
+
+
+  <!-------------------------------------- gfuykfuyfdu ------------------------------------------>
+
+
+  <div id="genre">
+    <h2>Browse by Genre</h2>
+  </div>
+  <div class="genre">
+    <div>
+      <img src="https://akamaividz2.zee5.com/image/upload/platform/movie/Action-genre.jpg" alt="">
+      <h3>Action</h3>
+    </div>
+
+    <div>
+      <img src="https://akamaividz2.zee5.com/image/upload/platform/movie/Adventure-genre.jpg" alt="">
+      <h3>Adventure</h3>
+    </div>
+
+    <div>
+      <img src="https://akamaividz2.zee5.com/image/upload/platform/movie/Thriller-genre.jpg" alt="">
+      <h3>Thriller</h3>
+    </div>
+
+    <div>
+      <img src="https://akamaividz2.zee5.com/image/upload/platform/movie/Romance-genre.jpg" alt="">
+      <h3>Romance</h3>
+    </div>
+
+    <div>
+      <img src="https://akamaividz2.zee5.com/image/upload/platform/movie/Comedy-genre.jpg" alt="">
+      <h3>Comedy</h3>
+    </div>
+
   </div>
 
-  <div>
-    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5250010/portrait/1920x770df3c97fa714d4e569a2a8b06169eb715.jpg" alt="">
+
+
+  <!---------------------------------------- jfhruyguregh ----------------------------------->
+
+
+  <div id="horror">
+    <h2>Popular Horror Movies | Hindi</h2>
   </div>
 
-  <div>
-    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5245891/portrait/1920x7704b56222a936c44f7b30712b3b0b52c9d.jpg" alt="">
+  <div class="horror">
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-8360/portrait/1920x77025533280d14f4f87a122eac645431ad4.jpg"
+        alt="">
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-phobia/portrait/00phobiacover.jpg"
+        alt="">
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-7347/portrait/007347cover1206827067.jpg"
+        alt="">
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-6966/portrait/1920x7705986bc7c7ee749f0803a9166be3829a8.jpg"
+        alt="">
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-movie_933078720/portrait/00movie93307872880645726.jpg"
+        alt="">
+    </div>
+
+    <div>
+      <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-55493/portrait/amavas1920x770.jpg"
+        alt="">
+    </div>
   </div>
 
-  <div>
-    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5246218/portrait/1920x7704cedc8256d384df89a14578e1eb8c982.jpg" alt="">
+  <!--------------------------------------- hgjtj --------------------------------------------------->
+
+
+  <div id="third">
+    <img src="https://tpc.googlesyndication.com/simgad/10722340118270183427" alt="" />
   </div>
 
-  <div>
-    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-6-4z5230436/portrait/1920x77080a9ccaeef524481ad49d14208180c8a.jpg" alt="">
-  </div>
-</div>
 
+  <!----------------------------------------- ytdetyjdftygfd ------------------------------------->
 
-
-<!-------------------------------------------- uygyugug -------------------------------------------->
-
-
-
-<div id="hindi">
-  <h2>Hindi Dubbed Movies</h2>
-</div>
- 
-<div class="hindi">
-  <div>
-    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5250530/portrait/1920x770129e19e854434fa98ff8734cfc2d6d32e0963a08143b47459c03e15212307595.jpg" alt="">
+  <div id="main-carousel">
+    <h2>Happy B'day Superstars | November</h2>
   </div>
 
-  <div>
-    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-348372/portrait/1920x7708b719aadb538429abc4dde7dea45032d.jpg" alt="">
+  <div class="main-carousel">
+    <div class="cell"> <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5215371/portrait/1920x770ec63871185df4805b544c9c8c170928b0f559a2e0e6f462581b52e5a26ae4d76.jpg"
+        alt=""> </div>
+    <div class="cell"> <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-19151/portrait/1920x7701456859180.jpg"
+        alt=""> </div>
+    <div class="cell"> <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-7655/portrait/007655incover2092819401.jpg"
+        alt=""></div>
+    <div class="cell"> <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-2400/portrait/bewafaa1920x770.jpg"
+        alt=""> </div>
+    <div class="cell"> <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z51560/portrait/1920x77012968c66a55e4f45916a51aa012edeb5.jpg"
+        alt=""> </div>
+    <div class="cell"> <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-6963/portrait/cheenikum1920x770.jpg"
+        alt=""></div>
+    <div class="cell"> <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-251089/portrait/1920x7709e8ea1ff9977497cbc665c36aa630e68.jpg"
+        alt=""> </div>
+    <div class="cell"> <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-movie_466418637/portrait/1920x770bd16a42c2fd7485db6672b48cb8b435e.jpg"
+        alt=""> </div>
+    <div class="cell"> <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-2451/portrait/1920x7701c808be634e14e7a96c2d648408a8436.jpg"
+        alt=""></div>
+    <div class="cell"> <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-movie_357908859/portrait/1920x770213846978.jpg"
+        alt=""> </div>
+    <div class="cell"> <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5191648/portrait/1920x77015755573326f485eb9b2ad856c296abd.jpg"
+        alt=""> </div>
+    <div class="cell"> <img
+        src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z524509/portrait/1920x77032a949c97bf1471bb9641816578dfe44.jpg"
+        alt=""></div>
   </div>
 
-  <div>
-    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-105149/portrait/00105149incove322862859.jpg" alt="">
-  </div>
 
-  <div>
-    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5227565/portrait/1920x7704ce388d5a6e74dac8ad9255657da588f.jpg" alt="">
-  </div>
-
-  <div>
-    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-1z5168593/portrait/1920x770d32fb5a532b54f718e18d08ae5bfe599.jpg" alt="">
-  </div>
-
-  <div>
-    <img src="https://akamaividz2.zee5.com/image/upload/w_195,h_293,c_scale,f_webp,q_auto:eco/resources/0-0-8142/portrait/008142cover587945931.jpg" alt="">
-  </div>
-</div>
+  <hr>
 
 
+  <footer>
+    <div id="parent">
+      <div>
+        <h5>Downlaod Apps</h5>
+        <img src="https://www.zee5.com/images/play_store.png?ver=2.52.50" alt="" />
+        <img src="https://www.zee5.com/images/app_store.png?ver=2.52.50" alt="" />
+      </div>
+      <div>
+        <h5>Connect with us</h5>
+        <img src="/images/facebook.png" alt="" />
+        <img src="/images/instagram.png" alt="" />
+        <img src="/images/twitter.png" alt="" />
+        <img src="/images/youtube.png" alt="" />
+      </div>
+    </div>
+    <hr>
+    <div id="foot2">
+      <a href="">About us</a><span>|</span>
+      <a href="">Help Center</a><span>|</span>
+      <a href="">Privacy Policy</a><span>|</span>
+      <a href="">Terms of Use</a><span>|</span>
+    </div>
 
-<!---------------------------------- yugtuygjh ------------------------------------------------>
+    <div id="foot3">
+      <div>
+        <h6>Popular TV Shows</h6>
+        <p>Kumkum Bhagya </p>
+        <p>Kundali Bhagya</p>
+        <p>Tujhse hai Rabta</p>
+      </div>
+      <div>
+        <h6>Premiun Movies</h6>
+        <p>Kya meri sonam gupta Bewafa hai</p>
+        <p>Hekmet</p>
+        <p>200 Halla Ho</p>
+        <p>Dial 100</p>
+        <p>14 Phere</p>
+      </div>
+      <div>
+        <h6>Popular Live TV Channels</h6>
+        <p>Aaj Tak</p>
+        <p>Zee News</p>
+        <p> ZEE TV HD</p>
+        <p>Marathi HD</p>
+        <p>& TV HD</p>
+      </div>
+      <div>
+        <h6>Popular Web Series</h6>
+        <p>Sunflower</p>
+        <p>Jeet ki Zid</p>
+        <p>Bicchoo Ka Khel</p>
+        <p>Tripling</p>
+        <p>Naxalbari</p>
+      </div>
+      <div>
+        <h6>Bollywood Top Celebrities</h6>
+        <p>Sunny Leone</p>
+        <p>Disha Patani</p>
+        <p>Deepika Padukone</p>
+        <p>Salman Khan</p>
+        <p>Nora Fatehi</p>
+      </div>
+      <div>
+        <h6>Games and News</h6>
+        <p>Play</p>
+        <p>Stories</p>
+        <p>Articles</p>
+      </div>
+    </div>
 
-<div id="browse">
-  <h2>Browse by Language</h2>
-</div>
-<div class="browse">
-  <div>
-    <img  src="https://akamaividz2.zee5.com/image/upload/platform/lang/english.jpg" alt="">
-  </div>
+    <div id="foot4">
+      <p>Best viewed on Google Chrome 80+, Microsoft Edge 81+, Mozilla Firefox 75+, Safari 5.1.5+ <br>
+        Copyright © 2022 Zee Entertainment Enterprises Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
 
-  <div>
-    <img src="https://akamaividz2.zee5.com/image/upload/platform/lang/hindi.jpg" alt="">
-  </div>
-
-  <div>
-    <img src="https://akamaividz2.zee5.com/image/upload/platform/lang/bengali.jpg" alt="">
-  </div>
-
-  <div>
-    <img src="https://akamaividz2.zee5.com/image/upload/platform/lang/bhojpuri.jpg" alt="">
-  </div>
-
-  <div>
-    <img src="https://akamaividz2.zee5.com/image/upload/platform/lang/gujrati.jpg" alt="">
-  </div>
-
-  <div>
-    <img src="" alt="">
-  </div>
-</div>
-  </body>
 </html>
+<!-- <script src="/Movies.js"></script> -->
 <script src="/Movies.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<script type="text/javascript">
+  $('.main-carousel').flickity({
+    // options
+    cellAlign: 'left',
+    wrapAround: true,
+    freescroll: true
+  });
+
+</script>
+
+
+<!-- <script>
+  let prev = document.getElementById('previous');
+let next = document.getElementById('next');
+
+let arr = ["images/img1.jpg", "images/img2.jpg", "images/img3.jpg","images/img4.jpg","images/img5.jpg","images/img6.jpg"];
+
+let i = 0;
+
+next.addEventListener('click', function () {
+    i++;
+    if (i > arr.length - 1) {
+        i = 0;
+    }
+    document.getElementById('image2').src = arr[i];
+})
+
+//prev btn
+prev.addEventListener('click', function () {
+    i--;
+    if (i < 0) {
+        i = arr.length - 1;
+    }
+    document.getElementById('image2').src = arr[i];
+})
+
+function slides() {
+    document.getElementById("image2").src = arr[i];
+
+    if (i < arr.length - 1) i++;
+    else i = 0;
+  }
+  setInterval(slides, 3000);
+</script> -->

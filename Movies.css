@@ -280,6 +280,11 @@
   }
  .browse>div>img{
   width: 240px;
+  
+ }
+
+ .browse >div > h3{
+  color: aliceblue;
  }
   
   .browse > div {
@@ -288,6 +293,210 @@
   .browse > div:hover {
     transform: scaleX(1.1);
     z-index: 2;
+  }
+
+
+
+
+
+
+
+
+
+  #genre{
+    margin: 50px 100px 30px 50px;
+    color: antiquewhite;
+  }
+  .genre{
+    /* border: 1px solid white; */
+    display: grid;
+     /* border: 1px solid red; */
+    padding: 20px;
+    justify-content: space-between;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+     
+  }
+ .genre>div>img{
+  width: 240px;
+ }
+ .genre>div>h3{
+  color: aliceblue;
+ }
+  
+  .genre > div {
+    transition: all 0.5s;
+  }
+  .genre > div:hover {
+    transform: scaleX(1.1);
+    z-index: 2;
+  }
+
+
+
+
+  #horror{
+    margin: 50px 100px 30px 50px;
+    color: antiquewhite;
+  }
+  .horror{
+    /* border: 1px solid white; */
+    display: grid;
+     /* border: 1px solid red; */
+    padding: 20px;
+    justify-content: space-between;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  
+  .horror > div {
+    transition: all 0.5s;
+  }
+  .horror > div:hover {
+    transform: scaleX(1.1);
+    z-index: 2;
+  }
+
+
+
+
+
+  #third{
+    /* border: 2px solid rgb(221, 3, 3); */
+    width: 100%;
+    background-color: rgb(19, 2, 23);
+    /* position: relative; */
+    top: 100px;
+    text-align: center;
+    margin-top: 10px;
+    
+
+  }
+
+   #main-carousel > h2 {
+    margin: 50px 100px 30px 50px;
+    color: antiquewhite;
+   }
+
+   
+  .cell{
+    /* width:33%; */
+    /* height: 350px; */
+    margin: 0 15px;
+    overflow: hidden;
+  
+    /* border-radius: 8px; */
+  }
+  .cell img{
+    width:100%;
+    /* height: 350px; */
+    object-fit: cover;
+  }
+
+
+
+
+
+  hr{
+    color: white;
+    opacity: 1;
+    border-top: .5px solid white;
+    /* width: 90%; */
+    margin:20px auto;
+  }
+
+
+
+
+  #parent {
+    display: flex;
+    border:0px solid red;
+    color: white;
+    justify-content: space-between;
+    margin: 40px 0px;
+  }
+  
+  #parent > div:nth-child(1) {
+    border:0px solid blue;
+    display: flex;
+    padding: 20px;
+    width: 33%;
+    justify-content: space-between;
+  
+  }
+  
+  #parent > div:nth-child(2) {
+    border: 0px solid green;
+    display: flex;
+    padding: 20px;
+    width: 28%;
+    justify-content: space-between;
+  
+  }
+  #parent > div:nth-child(1) img {
+    height:35px;
+  }
+  
+  #parent > div:nth-child(2) img {
+    height: 30px;
+  }
+  
+  #foot2{
+    display: flex;
+    gap: 20px;
+    /* justify-content: space-between; */
+    margin-left: 20px;
+  }
+  
+  #foot2 > a {
+  color: aliceblue;
+  text-decoration: none;
+  }
+  
+  #foot2 >span{
+    color: aliceblue;
+  }
+  
+  #foot2 >a:hover{
+    color: rgb(134, 15, 147);
+  }
+  #foot3{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  h6{
+    color: aliceblue;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  #foot3{
+    /* border: 1px solid white; */
+    margin: 50px 100px 0px 50px;
+  }
+  #foot3>div>p{
+    color: rgb(127, 128, 130);
+    margin-bottom: 1rem;
+  }
+  
+  #foot3>div>p:hover{
+    color: rgb(134, 15, 147);
+    cursor: pointer;
+  }
+  
+  #foot4{
+    /* border: 1px solid white; */
+    margin: 50px 100px 50px 50px;
+  }
+  #foot4>p{
+    color: rgb(127, 128, 130);
   }
 
 

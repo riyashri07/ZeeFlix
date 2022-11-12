@@ -29,3 +29,10 @@ function slides() {
     else i = 0;
   }
   setInterval(slides, 3000);
+
+
+
+
+
+
+ 
