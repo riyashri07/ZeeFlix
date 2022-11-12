@@ -190,6 +190,20 @@ li>a:hover {
   z-index: 2;
 }
 
+.cell{
+   /* width:33%;
+  height: 350px;  */
+  margin: 0 15px;
+  overflow: hidden;
+
+  /* border-radius: 8px; */
+}
+.cell img{
+  width:100%;
+  /* height: 350px; */
+  object-fit: cover;
+}
+
 #Top {
   margin: 50px 100px 0px 50px;
   color: antiquewhite;
@@ -267,6 +281,14 @@ h5 {
 .world > div:hover {
   transform: scaleX(1.1);
   z-index: 2;
+}
+
+hr{
+  color: white;
+  opacity: 1;
+  border-top: .5px solid white;
+  /* width: 80%; */
+  margin:20px auto;
 }
 
 #learn {
